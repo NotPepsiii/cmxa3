@@ -269,9 +269,9 @@ export default function Login({ onLoginSuccess }: LoginProps) {
 
       {/* Footer / Safety Notice */}
       <footer className="py-6 px-4 text-center text-[10px] text-neutral-500 max-w-md mx-auto w-full z-10 leading-relaxed">
-        <p className="font-bold text-neutral-400">PepFlick Key-Auth Security Guard</p>
+        <p className="font-bold text-neutral-400">PepFlick Secure Login</p>
         <p className="mt-1">
-          Authorized accesses only. All active validation flows are fully verified live against our secure Github content database.
+          Authorized accesses only.
         </p>
       </footer>
     </div>
