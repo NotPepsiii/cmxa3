@@ -253,13 +253,13 @@ export default function Login({ onLoginSuccess }: LoginProps) {
               >
                 <p className="font-extrabold text-neutral-200">How do I register or get a key?</p>
                 <p>
-                  PepFlick keys are generated instantly via our custom **Discord bot**. Join our Discord server and use:
+                  To get a key/account creation you must DM Pepsi directly to be considered access.
                 </p>
                 <div className="bg-[#07080b] p-2.5 rounded border border-neutral-850 font-mono text-[10px] text-amber-400 space-y-1 select-all">
-                  <p>/key username expire</p>
+                  <p>All account creations are Pepsi's discretion.</p>
                 </div>
                 <p className="text-[10.5px]">
-                  Where <code className="text-white">username</code> is the name you want to use here, and <code className="text-white">expire</code> is the validity period (e.g., <code className="text-white">2026-12-31</code>).
+                   <code className="text-white"></code> <code className="text-white"></code> <code className="text-white"></code>).
                 </p>
               </motion.div>
             )}
