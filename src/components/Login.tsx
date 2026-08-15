@@ -89,7 +89,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
 
       // 6. Validate Key
       if (userRecord.key !== enteredKey) {
-        setError("Incorrect Access Key. Please check the key given by the Discord bot.");
+        setError("Incorrect Access Key. Please check the key given by Pepsi.");
         setLoading(false);
         return;
       }
@@ -170,7 +170,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
                 Restricted Access
               </h1>
               <p className="text-xs text-neutral-400 mt-1.5">
-                Please validate your Discord key to continue to PepFlick.
+                Please enter given username and password by Pepsi to continue using PepFlick.
               </p>
             </div>
 
@@ -196,7 +196,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
                     id="login-username"
                     type="text"
                     required
-                    placeholder="Enter registered username"
+                    placeholder="Username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     disabled={loading}
@@ -215,7 +215,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
                     id="login-key"
                     type="password"
                     required
-                    placeholder="Enter your security access key"
+                    placeholder="Password"
                     value={key}
                     onChange={(e) => setKey(e.target.value)}
                     disabled={loading}
