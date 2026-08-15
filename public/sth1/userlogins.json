@@ -1,0 +1,7 @@
+{
+  "users": [
+    { "username": "pepsi", "password": "123", "name": "Pepsi Dev" },
+    { "username": "admin", "password": "password", "name": "Admin" },
+    { "username": "user1", "password": "password123", "name": "PepFlick Member" }
+  ]
+}

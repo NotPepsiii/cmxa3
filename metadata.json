@@ -1,0 +1,6 @@
+{
+  "name": "Pep Flick",
+  "description": "A premium, fully client-side Disney-inspired movie discovery and stream player platform powered by TMDB.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

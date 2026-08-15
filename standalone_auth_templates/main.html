@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PepFlick+ Protected Workspace</title>
+    <!-- ⚠️ STRICT CLIENT-SIDE ROUTER GUARD - Runs BEFORE page rendering to block intruders -->
+    <script src="js/protect.js"></script>
+    
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #08090c;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-white flex flex-col justify-between">
+    <!-- Navbar -->
+    <header class="bg-[#0e0f14]/80 backdrop-blur-md border-b border-neutral-900 sticky top-0 z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-1.5">
+                <span class="text-xl md:text-2xl font-black text-[#e50914] tracking-wider uppercase">
+                    PEP<span class="text-white">FLICK</span><span class="text-amber-400 font-light ml-0.5">+</span>
+                </span>
+            </div>
+
+            <!-- Profile and Log out controls -->
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2.5">
+                    <div id="user-avatar" class="w-8 h-8 rounded-lg bg-[#e50914] text-white flex items-center justify-center font-extrabold text-sm uppercase">
+                        U
+                    </div>
+                    <div class="flex flex-col text-left">
+                        <span id="user-display-name" class="text-xs text-neutral-300 font-bold hidden md:inline">User</span>
+                        <span id="key-expiry-info" class="text-[9px] text-neutral-500 hidden md:inline leading-none">Exp: YYYY-MM-DD</span>
+                    </div>
+                </div>
+                <button id="logout-btn" class="p-2 text-neutral-400 hover:text-[#e50914] hover:bg-[#e50914]/10 rounded-lg transition-all cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Panel -->
+    <main class="flex-1 max-w-4xl mx-auto w-full px-6 py-12 text-center flex flex-col items-center justify-center">
+        <div class="bg-[#0e0f14] border border-neutral-850 rounded-xl p-8 md:p-12 shadow-2xl max-w-2xl w-full">
+            <div class="w-16 h-16 bg-green-500/10 border border-green-500/30 text-green-400 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+            </div>
+
+            <h2 class="text-2xl font-black text-white uppercase tracking-wider mb-2">Access Granted</h2>
+            <p class="text-sm text-neutral-400 mb-6">Welcome to your secure PepFlick console workspace. Your authentication key is verified and active.</p>
+
+            <div class="bg-[#07080b] border border-neutral-900 rounded-lg p-6 text-left space-y-4">
+                <h3 class="text-xs uppercase font-extrabold text-neutral-400 tracking-widest pb-2 border-b border-neutral-900">Session Information</h3>
+                
+                <div class="grid grid-cols-2 gap-4 text-xs">
+                    <div>
+                        <p class="text-neutral-500 font-semibold mb-0.5">Logged in as:</p>
+                        <p id="info-username" class="font-extrabold text-white uppercase">User</p>
+                    </div>
+                    <div>
+                        <p class="text-neutral-500 font-semibold mb-0.5">Authorization Source:</p>
+                        <p class="text-amber-400 font-bold">Discord Bot API</p>
+                    </div>
+                    <div>
+                        <p class="text-neutral-500 font-semibold mb-0.5">Expiration Date:</p>
+                        <p id="info-expire" class="font-bold text-white">YYYY-MM-DD</p>
+                    </div>
+                    <div>
+                        <p class="text-neutral-500 font-semibold mb-0.5">Database Sync:</p>
+                        <p class="text-green-500 font-bold flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                            Live Content Check
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-xs text-neutral-500 mt-6 leading-relaxed">
+                If your key is revoked via the Discord bot, or if it reaches its expiration date, this page will immediately log you out and lock your workspace on the next load.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 border-t border-neutral-900 bg-[#050608] text-center text-[10px] text-neutral-600">
+        <p>&copy; PepFlick Stream Systems. Secured using Discord Bot Key-Auth v1.0.0.</p>
+    </footer>
+
+    <!-- Hook up dynamic user data elements -->
+    <script>
+        const session = JSON.parse(localStorage.getItem('pepflick_session'));
+        if (session) {
+            document.getElementById('user-avatar').textContent = session.username.charAt(0).toUpperCase();
+            document.getElementById('user-display-name').textContent = session.username;
+            document.getElementById('key-expiry-info').textContent = `Exp: ${session.expire}`;
+            
+            document.getElementById('info-username').textContent = session.username;
+            document.getElementById('info-expire').textContent = session.expire;
+        }
+
+        document.getElementById('logout-btn').addEventListener('click', () => {
+            localStorage.removeItem('pepflick_session');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

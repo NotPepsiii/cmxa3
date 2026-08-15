@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-title: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-netflix-red: #e50914;
+  --color-netflix-red-hover: #b80710;
+  --color-netflix-dark: #08090c;
+  --color-netflix-black: #050608;
+  --color-netflix-grey: #111216;
+}
+
+/* Custom scrollbar behaviors for movie carousels and lists */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08090c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(229, 9, 20, 0.3);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(229, 9, 20, 0.7);
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  background-color: #08090c;
+  color: #f9f9f9;
+  overflow-x: hidden;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom TV remote focus state styling */
+.tv-focusable {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none !important;
+}
+
+.tv-focusable:focus,
+.tv-focusable:focus-within {
+  border-color: #e50914 !important;
+  box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.65), 0 0 25px rgba(229, 9, 20, 0.5) !important;
+  transform: scale(1.05) !important;
+  z-index: 30;
+}
+
+/* Ensure active remote inputs stand out */
+input.tv-focusable:focus {
+  background-color: #1a1c23 !important;
+  border-color: #e50914 !important;
+}
+
+/* Adjust scale of large modal containers to avoid jumping */
+#detail-modal-container.tv-focusable:focus {
+  transform: none !important;
+  box-shadow: none !important;
+}

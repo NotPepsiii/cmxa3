@@ -1,0 +1,43 @@
+/* Custom styles and animation styles for standalone PepFlick */
+html {
+    scroll-behavior: smooth;
+    background-color: #08090c;
+}
+
+body {
+    background-color: #08090c;
+}
+
+/* Custom shadow indicators for inputs */
+input:focus {
+    box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.2);
+}
+
+/* High contrast scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #08090c;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1f2026;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e50914;
+}
+
+/* Custom keyframes animation */
+@keyframes pulseGlow {
+    0%, 100% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+}
