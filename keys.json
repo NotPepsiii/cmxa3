@@ -3,6 +3,10 @@
     "Pepsi": {
       "key": "a7pSFBu8Xx6UYguU",
       "expire": "2026-12-01"
+    },
+    "Pepsi2": {
+      "key": "Obc7FG3EPsGJm6w1",
+      "expire": "12-01-02"
     }
   }
 }
