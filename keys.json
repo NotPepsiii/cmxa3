@@ -11,6 +11,10 @@
     "GabbiDev": {
       "key": "D3Rxw6I3ngw8uLkN",
       "expire": "2027-01-01"
+    },
+    "Test": {
+      "key": "2zQBC2SeDTEuI8k8",
+      "expire": "2027-01-01"
     }
   }
 }
