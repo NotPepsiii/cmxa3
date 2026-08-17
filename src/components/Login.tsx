@@ -28,7 +28,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
 
     try {
       // 1. Fetch keys.json from the GitHub raw URL
-      const apiUrl = "https://api.github.com/repos/NotPepsiii/cmxa3/contents/keys.json";
+      const rawUrl = "https://raw.githubusercontent.com/NotPepsiii/cmxa3/main/keys.json";
       let response;
       try {
         response = await fetch(rawUrl, { cache: "no-store" });
