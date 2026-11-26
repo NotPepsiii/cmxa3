@@ -23,6 +23,10 @@
     "Robert": {
       "key": "g8YrjdzDF8vw8G69",
       "expire": "2030-01-01"
+    },
+    "Vince": {
+      "key": "2hJWKSbmAfuTZ5HX",
+      "expire": "2030-01-01"
     }
   }
 }
