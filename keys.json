@@ -19,6 +19,10 @@
     "Daniel": {
       "key": "60x6CaeKEjcPPPKq",
       "expire": "2030-12-01"
+    },
+    "Robert": {
+      "key": "g8YrjdzDF8vw8G69",
+      "expire": "2030-01-01"
     }
   }
 }
